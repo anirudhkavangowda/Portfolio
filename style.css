@@ -1,0 +1,346 @@
+/* Reset and Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  padding-top: 20px; /* Added padding */
+  padding-bottom: 0px; /* Added padding */
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+/* Header and Navigation */
+header {
+  background-color: #fff;
+  padding: 20px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px; /* Added margin-bottom */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px; /* Added padding */
+}
+
+.left-section {
+  margin-right: auto; /* Pushes the left section to the left */
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  margin-left: 20px; /* Added margin-left */
+  padding: 5px 10px; /* Added padding */
+}
+
+nav a:hover {
+  color: #666;
+}
+#home-link {
+  font-size: 24px;
+  font-weight: 700;
+  margin-left: 10px; /* Adjusted margin */
+  margin-right: auto; /* Pushes it to the left */
+}
+
+/* Hero Section */
+#jumbotron {
+  background-color: #f9f9f9;
+  padding: 80px 20px; /* Added padding */
+  text-align: center;
+}
+
+#big-text h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+#big-text h2 {
+  font-size: 24px;
+  color: #666;
+}
+
+/* About Section */
+#about {
+  padding: 80px 20px; /* Added padding */
+}
+
+.section-heading {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.section-desc {
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.no-link-style {
+  text-decoration: none;
+  color: inherit; /* Inherit color from parent */
+}
+
+#about button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 20px;
+}
+
+#about button:hover {
+  background-color: #666;
+}
+
+/* Projects Section */
+#projects {
+  background-color: #f9f9f9;
+  padding: 80px 20px; /* Added padding */
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+}
+
+.project-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.project-heading a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project-heading a:hover {
+  color: #666;
+}
+
+/* Contact Section */
+#contact {
+  padding: 80px 20px; /* Added padding */
+}
+
+#fs-frm input,
+#fs-frm select,
+#fs-frm textarea,
+#fs-frm fieldset,
+#fs-frm optgroup,
+#fs-frm label,
+#fs-frm #card-element:disabled {
+  font-family: inherit;
+  font-size: 100%;
+  color: inherit;
+  border: none;
+  border-radius: 0;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+#fs-frm label,
+#fs-frm legend,
+#fs-frm ::placeholder {
+  font-size: .825rem;
+  margin-bottom: .5rem;
+  padding-top: .2rem;
+  display: flex;
+  align-items: baseline;
+}
+
+/* border, padding, margin, width */
+#fs-frm input,
+#fs-frm select,
+#fs-frm textarea,
+#fs-frm #card-element {
+  border: 1px solid rgba(0,0,0,0.2);
+  background-color: rgba(255,255,255,0.9);
+  padding: .75em 1rem;
+  margin-bottom: 1.5rem;
+}
+#fs-frm input:focus,
+#fs-frm select:focus,
+#fs-frm textarea:focus {
+  background-color: white;
+  outline-style: solid;
+  outline-width: thin;
+  outline-color: gray;
+  outline-offset: -1px;
+}
+#fs-frm [type="text"],
+#fs-frm [type="email"] {
+  width: 100%;
+}
+#fs-frm [type="button"],
+#fs-frm [type="submit"],
+#fs-frm [type="reset"] {
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color:  #333;
+  width: auto;
+  cursor: pointer;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+}
+#fs-frm [type="button"]:focus,
+#fs-frm [type="submit"]:focus,
+#fs-frm [type="reset"]:focus {
+  outline: none;
+}
+#fs-frm [type="submit"],
+#fs-frm [type="reset"] {
+  margin-bottom: 0;
+}
+#fs-frm select {
+  text-transform: none;
+}
+
+#fs-frm [type="checkbox"] {
+  -webkit-appearance: checkbox;
+  -moz-appearance: checkbox;
+  appearance: checkbox;
+  display: inline-block;
+  width: auto;
+  margin: 0 .5em 0 0 !important;
+}
+
+#fs-frm [type="radio"] {
+  -webkit-appearance: radio;
+  -moz-appearance: radio;
+  appearance: radio;
+}
+
+/* address, locale */
+#fs-frm fieldset.locale input[name="city"],
+#fs-frm fieldset.locale select[name="state"],
+#fs-frm fieldset.locale input[name="postal-code"] {
+  display: inline;
+}
+#fs-frm fieldset.locale input[name="city"] {
+  width: 52%;
+}
+#fs-frm fieldset.locale select[name="state"],
+#fs-frm fieldset.locale input[name="postal-code"] {
+  width: 20%;
+}
+#fs-frm fieldset.locale input[name="city"],
+#fs-frm fieldset.locale select[name="state"] {
+  margin-right: 3%;
+}
+
+
+/* Footer */
+/* Footer */
+footer {
+  background-color: #fff; /* Changed to white */
+  color: #333; /* Changed text color for better visibility on a white background */
+  padding: 20px 20px;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer a {
+  color: #333; /* Changed to darker for visibility on a white background */
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 24px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #666; /* Lighter grey on hover */
+}
+
+footer img {
+  width: 24px; /* Set image width */
+  height: auto; /* Maintain aspect ratio */
+  vertical-align: middle; /* Align images with text */
+}
+
+
+.success-message {
+  color: green;
+}
+
+.error-message {
+  color: red;
+}
+
+.small-text {
+  font-size: 14px;
+}
+/* Center align content in footer */
+footer nav {
+  display: flex;
+  justify-content: center;
+}
+
+footer nav a {
+  margin: 0 20px; /* Adjust spacing as needed */
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+  nav {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px; /* Added padding */
+  }
+
+  nav a {
+      margin: 10px 0;
+  }
+
+  #jumbotron {
+      padding: 40px 20px; /* Added padding */
+  }
+
+  #big-text h1 {
+      font-size: 36px;
+  }
+
+  #big-text h2 {
+      font-size: 20px;
+  }
+
+  .section-heading {
+      font-size: 24px;
+  }
+
+  .project-list {
+      grid-template-columns: 1fr;
+  }
+}

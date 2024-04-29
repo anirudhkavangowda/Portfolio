@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap">
+   
+  <meta charset="utf-8">
+  <title></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description"
+    content="Hi, I'm  Anirudh!  Graduate student at University of Wisconsin-Madison, aspiring product manager, designer, data analyst, software engineer and music producer.">
+  <meta name="keywords"
+    content="Anirudh Kavan Gowda, University of Wisconsin-Madison, product manager, product management, software engineering, data analytics, designer, full stack, web design">
+  <meta name="author" content="Anirudh Kavan Gowda">
+  <style>
+    @keyframes waveAnimation {
+        0%, 100% {
+            transform: rotate(-10deg);
+        }
+        50% {
+            transform: rotate(10deg);
+        }
+    }
+
+    .wave {
+        display: inline-block;
+        animation: waveAnimation 1s infinite;
+        transform-origin: 70% 70%;
+    }
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+      var form = document.getElementById("contactForm");
+      var formResponseMessage = document.getElementById("form-response-message");
+  
+      form.addEventListener("submit", function(event) {
+          event.preventDefault(); // Prevent default form submission
+          var formData = new FormData(form);
+  
+          // Customize the message displayed after successful form submission
+          var successMessage = "Your message has been sent!";
+  
+          // Send form data via AJAX
+          fetch(form.getAttribute("action"), {
+              method: "POST",
+              headers: {
+                  "Accept": "application/json"
+              },
+              body: formData
+          })
+          .then(function(response) {
+              return response.json();
+          })
+          .then(function(data) {
+              // Display success message
+              formResponseMessage.textContent = successMessage;
+              formResponseMessage.classList.add("success-message");
+              form.reset(); // Clear form fields
+          })
+          .catch(function(error) {
+              // Display error message if form submission fails
+              formResponseMessage.textContent = "There was a problem submitting your form. Please try again later.";
+              formResponseMessage.classList.add("error-message");
+          });
+      });
+  });
+  </script>
+  
+
+</head>
+
+<body>
+  <div class="h-card wrapper">
+    <div id="navbar" class="">
+      <nav class="row items">
+        <div class="left-section">
+          <a href="/" class="u-url no-link-style" rel="me" id="home-link">
+            Anirudh Kavan Gowda
+          </a>
+        </div>
+        <div class="right-section">
+          <a href="/#about" title="About me" class="nav-link reverse-link-style">About</a>
+          <a href="/#projects" title="Projects" class="nav-link reverse-link-style">Projects</a>
+          <a href="/#contact" title="Contact me" class="nav-link reverse-link-style">Contact</a>
+          <a href="https://drive.google.com/file/d/1Wm4ST6bLI0f7124Vw5CcZ4Aylkn2mocd/view?usp=share_link" title="Resume" class="nav-link reverse-link-style" target="_blank">Resume</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+    <header id="jumbotron" class="container">
+      <div class="row">
+        <div id="big-text" class="twelve columns">
+          <h1>
+            <strong>Hi, I'm <span class="p-name">Anirudh!</span> <span class="wave">&#x1F44B;</span></strong>
+          </h1>
+          <h2>
+            <span class="p-note">
+              I'm a Masters in Information Systems student at University of Wisconsin-Madison. 
+            </span>
+          </h2>
+        </div>
+      </div>
+    </header>
+    <div class="container"></div>
+    <main id="main-container" class="container">
+      <article class="row section-article" id="about">
+        <div class="four columns">
+          <h4 class="section-heading align-left" style="margin-top: 0;">About me</h4>
+        </div>
+        <div class="eight columns">
+          <p>
+            I have experience in Product Management, Data Analytics, Web Development, UX-Research and Design and Music Production and I am looking to join a corporation for Internship/full time role.
+          </p>
+          <div style="margin: 20px 0; padding: 10px;">
+        
+      
+          <a href="https://www.linkedin.com/in/anirudhkavangowda/" target="_blank" class="no-link-style">
+            <button>See my LinkedIn</button>
+          </a>
+          &nbsp;&nbsp;
+          <a href="https://drive.google.com/file/d/1Wm4ST6bLI0f7124Vw5CcZ4Aylkn2mocd/view?usp=share_link" target="_blank" class="no-link-style">
+            <button>See my Resume</button>
+          </a>
+    
+        </div>
+        </div>
+
+      </article>
+      <article class="row section-article" id="projects">
+        <div class="four columns">
+          <h4 class="section-heading align-left" style="margin-top: 0;">Projects & Experience</h4>
+          <p class="section-desc align-left">Some things that I've worked on.</p>
+        </div>
+        <div class="eight columns">
+          <div class="project-list">
+            <div class="item">
+              <h5 class="project-heading">
+                <a href="https://github.com/anirudhkavangowda/Real-estate-price-prediction" target="_blank" class="reverse-link-style">
+                  Web Application to Predict Real Estate Prices
+                </a>
+              </h5>
+              <p>Developed a web application to predict real estate home prices in Bengaluru, India using a Linear Regression model.</p>
+            </div>
+            <div class="item">
+              <h5 class="project-heading">
+                <a href="https://github.com/anirudhkavangowda/Stock-price-forecast" target="_blank" class="reverse-link-style">
+                  Stock Price Forecasting
+                </a>
+              </h5>
+              <p>Successfully applied regression and forecasting models such as Linear regression, Decision Tree, KNN, Elastic Net, BayesianRidge, MLP Regressor and Facebook Prophet Elastic Net Regressor to forecast Stock price based on Closing Price and Volume.</p>
+            </div>
+            <div class="item">
+              <h5 class="project-heading">
+                <a href="https://www.linkedin.com/company/stuniverse/" target="_blank" class="reverse-link-style">
+                  Stuniverse
+                </a>
+              </h5>
+              <p>A marketplace connecting artists & studio owners for a seamless booking experience.</p>
+            </div>
+            <div class="item">
+              <h5 class="project-heading">
+                <a href="https://open.spotify.com/playlist/6jznbTJKldZUao5sIGQusj?si=e1a849c05e4a4f4e" target="_blank" class="reverse-link-style">
+                  Music
+                </a>
+              </h5>
+              <p>Established and managed a profitable personal brand, "Kavan", specializing in music production and audio engineering. Strategically marketed my projects, achieving 300K+ YouTube views, 300K+ Spotify streams, organically and secured a
+                feature in the Rolling Stone India magazine.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="row section-article" id="contact">
+        <div class="four columns">
+          <h4 class="section-heading align-left" style="margin-top: 0;">Contact me</h4>
+          <!-- <p class="section-desc align-left">Want to work with me or just say hi?</p> -->
+        </div>
+        <div class="eight columns">
+          <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mgegryjy" method="post">
+            <fieldset id="fs-frm-inputs">
+              <label for="full-name">Full Name</label>
+              <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+              <label for="email-address">Email Address</label>
+              <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
+              <label for="message">Message</label>
+              <textarea rows="5" name="message" id="message" placeholder="Type your message." required=""></textarea>
+              <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+            </fieldset>
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+      </article>
+    </main>
+    <footer id="footer" class="containerfooter">
+      <nav class="footer-left">
+        <a href="https://www.linkedin.com/in/anirudhkavangowda/" title="LinkedIn @anirudhkavangowda" target="_blank" class="link-style">
+          <img src="linkedin.png" alt="LinkedIn">
+        </a>
+        <a href="https://github.com/anirudhkavangowda" title="GitHub @anirudhkavangowda" target="_blank" class="link-style">
+          <img src="github.png" alt="GitHub">
+        </a>
+      </nav>
+      <span class="footer-right">
+        <span class="u-pull-right small-text">&copy; <span id="copyright-year"></span> Anirudh Kavan Gowda.</span>
+      </span>
+    </footer>
+    
+  <script type="text/javascript" src="/js/contact.js"></script>
+  <script>
+      document.getElementById('copyright-year').textContent = new Date().getFullYear();
+  </script>
+  </div>
+</body>
+<script type="text/javascript" src="/js/contact.js"></script>
+<script type="text/javascript" src="/js/ga.js"></script>
+
+</html>
